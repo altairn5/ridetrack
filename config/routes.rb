@@ -1,4 +1,49 @@
 Rails.application.routes.draw do
+root to: "users#index"
+
+ resources :sessions 
+ resources :users
+ resources :rides do
+    resources :rideprices
+  end
+
+
+#  Prefix Verb   URI Pattern                                   Controller#Action
+#                root GET    /                                             users#index
+#            sessions GET    /sessions(.:format)                           sessions#index
+#                     POST   /sessions(.:format)                           sessions#create
+#         new_session GET    /sessions/new(.:format)                       sessions#new
+#        edit_session GET    /sessions/:id/edit(.:format)                  sessions#edit
+#             session GET    /sessions/:id(.:format)                       sessions#show
+#                     PATCH  /sessions/:id(.:format)                       sessions#update
+#                     PUT    /sessions/:id(.:format)                       sessions#update
+#                     DELETE /sessions/:id(.:format)                       sessions#destroy
+#               users GET    /users(.:format)                              users#index
+#                     POST   /users(.:format)                              users#create
+#            new_user GET    /users/new(.:format)                          users#new
+#           edit_user GET    /users/:id/edit(.:format)                     users#edit
+#                user GET    /users/:id(.:format)                          users#show
+#                     PATCH  /users/:id(.:format)                          users#update
+#                     PUT    /users/:id(.:format)                          users#update
+#                     DELETE /users/:id(.:format)                          users#destroy
+#     ride_rideprices GET    /rides/:ride_id/rideprices(.:format)          rideprices#index
+#                     POST   /rides/:ride_id/rideprices(.:format)          rideprices#create
+#  new_ride_rideprice GET    /rides/:ride_id/rideprices/new(.:format)      rideprices#new
+# edit_ride_rideprice GET    /rides/:ride_id/rideprices/:id/edit(.:format) rideprices#edit
+#      ride_rideprice GET    /rides/:ride_id/rideprices/:id(.:format)      rideprices#show
+#                     PATCH  /rides/:ride_id/rideprices/:id(.:format)      rideprices#update
+#                     PUT    /rides/:ride_id/rideprices/:id(.:format)      rideprices#update
+#                     DELETE /rides/:ride_id/rideprices/:id(.:format)      rideprices#destroy
+#               rides GET    /rides(.:format)                              rides#index
+#                     POST   /rides(.:format)                              rides#create
+#            new_ride GET    /rides/new(.:format)                          rides#new
+#           edit_ride GET    /rides/:id/edit(.:format)                     rides#edit
+#                ride GET    /rides/:id(.:format)                          rides#show
+#                     PATCH  /rides/:id(.:format)                          rides#update
+#                     PUT    /rides/:id(.:format)                          rides#update
+#                     DELETE /rides/:id(.:format)                          rides#destroy
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

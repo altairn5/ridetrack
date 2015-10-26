@@ -1,0 +1,2 @@
+module RidepricesHelper
+end

@@ -1,0 +1,2 @@
+class RidepricesController < ApplicationController
+end

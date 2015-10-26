@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 1
+  surge: 
+  time: 2015-10-26 12:25:53
+
+two:
+  price: 1
+  surge: 
+  time: 2015-10-26 12:25:53
