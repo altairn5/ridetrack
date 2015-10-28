@@ -1,3 +1,17 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#user-info {
+  padding-bottom: 20px;
+}
+
+.event-details {
+ font-size: 15px;
+ font-weight: normal;
+}
+
+.list-group {
+margin-left: 20px;
+}
+
+
+.activity-list-container.text-left {
+  text-align: center;
+}

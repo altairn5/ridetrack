@@ -1,0 +1,29 @@
+<div class="bckgrnd">
+<div id="sites-index-page-wrapper">
+ <section id="hero-section">
+    <div class="navbarsplash">
+    	<div class="navbarsplash-inner">
+    		<div class="navbarsplash-login">
+             <%if current_user %>
+              <a><%= link_to "Profile", user_path(session[:user_id]), method: :get, :class => "btn-signup"%></a> 
+              <a><%=link_to "Log out", session_path, method: :delete, :class => "btn-login"%></a>
+            <% else %>
+    				<a href="#signupModal" data-toggle="modal" data-toggle-flip data-toggle-flip-target="#registerFlip" data-track-event="SignUpModal,TopbarBtn" class="btn-signup" id="registerBtn">Sign up</a>
+    				<a href="#loginModal" data-toggle="modal" data-toggle-flip data-toggle-flip-target="#loginFlip" data-directive="login" data-track-event="LogInModal,TopbarBtn" class="btn-login" id="loginBtn"><i class="icon-user"></i> Log in</a>
+    			</div>
+          <%end%>
+    	</div>
+    </div>
+    	<div class="main-splash row">
+    		<div class="inner">
+    		<h1> Ridetrack </h1>
+    		<h2> Commute cost Tracking Tool</h2>
+          <a href="#signupModal" data-toggle="modal" data-toggle-flip data-toggle-flip-target="#registerFlip" data-track-event="SignUpModal,TopbarBtn" class="btn-primary" id="registerBtn">Ridetrack Now!</a>
+    		</div>
+    	</div>
+    </section>
+  
+<!-- Modal -->
+  <%= render "partials/modal" %>
+</div>
+</div>

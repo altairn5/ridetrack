@@ -1,0 +1,63 @@
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="false">
+  <div class="modal-dialog flip-wrapper">
+    <div class="modal-content flip active" id="loginFlip">
+      <div class="modal-body">
+        <header class="header">
+          <p class="title">Log in</p>
+        </header>
+        <div class="alert alert-danger hide" id="errorWrapperLogin"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button></div>
+        <div class="form-controls">
+          <div class="form-controls">
+            <a id="auth-loginlink" href="#" class="btn-secondary btn-block btn-big" data-track-event="SignUpModal,SignUpWithFacebook"><i class="icon-facebook"></i>&nbsp;&nbsp;Log in with Facebook</a>
+          </div>
+          <div class="line-form-separator"></div>
+          <div class="form-group">
+            <%= form_for @user, url: "/sessions", method: "post" do |f| %>
+            <%= f.text_field :email, placeholder: "Email", :class => "form-control" %><br>
+            <%= f.password_field :password, placeholder: "Password", :class => "form-control" %>
+          </div>
+          <div class="form-controls">
+            <%= f.submit "Sign In", :class => "btn-primary btn-block" %>
+          </div>
+            <% end %> 
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="false">
+  <div class="modal-dialog flip-wrapper">
+    <div class="modal-content flip active" id="loginFlip">
+      <div class="modal-body">
+        <header class="header">
+          <p class="title">Sign up</p>
+        </header>
+        <div class="alert alert-danger hide" id="errorWrapperLogin"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button></div>
+        <div class="form-controls">
+          <div class="form-controls">
+            <a id="auth-loginlink" href="#" class="btn-secondary btn-block btn-big" data-track-event="SignUpModal,SignUpWithFacebook"><i class="icon-facebook"></i>&nbsp;&nbsp;Sign up with Facebook</a>
+          </div>
+          <div class="line-form-separator"></div>
+          <div class="form-group">
+          <%= form_for @user, :html => { :multipart => true } do |f| %>
+            <% if @user.errors.any? %> 
+              <div id="error_explanation">
+                <h2><%= pluralize(@user.errors.count, "error") %> prohibited sign up:</h2>
+                <ul><% @user.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              </div>
+          <% end %>
+            <% end %>
+              <%= f.text_field :first_name, placeholder: "First Name", :class => "form-control" %><br>
+              <%= f.text_field :last_name, placeholder: "Last Name", :class => "form-control" %><br>
+              <%= f.text_field :email, placeholder: "Email", :class => "form-control" %><br>
+              <%= f.password_field :password, placeholder: "Password", :class => "form-control" %><br>
+              <%= f.password_field :password_confirmation, placeholder: "Confirm Password", :class => "form-control" %><br>
+            <div class="form-group">
+              <%= f.submit "Sign In", :class => "btn-primary btn-block" %>
+            </div>
+              <%end%>
+         </div>
+      </div>
+    </div>
+  </div>

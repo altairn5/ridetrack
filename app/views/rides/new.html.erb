@@ -1,2 +1,14 @@
-<h1>Rides#new</h1>
-<p>Find me in app/views/rides/new.html.erb</p>
+ <%= render "partials/begmodal" %>
+
+<h1>Track a New Ride</h1>
+<div class="form-controls">
+	<div class="line-form-separator"></div>
+	<div class="form-group">
+<%= form_for @ride, url: rides_path, method: "post" do |f|%>
+<%= f.text_field :origin, :placeholder => "Origin Address", :class => "form-control", :id => "autocomplete"%><br>
+<%= f.text_field :destination, :placeholder => "Destination Address", :class => "form-control", :id => "autocomplete"%><br>
+<%= f.submit "Ridetrack Now", :class => "btn-primary btn-block"%><br>
+<%end%>
+</div>
+</div>
+
