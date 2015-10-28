@@ -11,6 +11,9 @@ before_action :current_user
   end
 
   def show
+  	@ride = Ride.find(params[:id])
+  	@origin = @ride[:origin]
+  	@destination =@ride[:destination]
   end
 
 
@@ -18,7 +21,7 @@ before_action :current_user
   	@user = current_user
   	@ride = Ride.new
   	if @ride.save 
-  		redirect_to user_path(session[:user_id])
+  		redirect_to ride_path(params[:id])
   	else
   	redirect_to new_ride_path
   	end
