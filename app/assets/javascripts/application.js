@@ -17,3 +17,4 @@
 //= require map/gmap
 //= require jquery.mb.YTPlayer
 //= require_tree .
+

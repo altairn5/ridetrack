@@ -1,4 +1,5 @@
 module SessionsHelper
+    
 
 	def login(user)
 		session[:user_id] = user.id
@@ -7,6 +8,12 @@ module SessionsHelper
 	def current_user
 		@current_user ||= session[:user_id] && User.find(session[:user_id])
     end
+
+    def right_user
+        if !current_user 
+            redirect_to new_session_path
+            end
+        end
 
     def logged_in?
     	if current_user == nil

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151026194504) do
+ActiveRecord::Schema.define(version: 20151028213838) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,9 +20,10 @@ ActiveRecord::Schema.define(version: 20151026194504) do
     t.integer  "price"
     t.integer  "surge"
     t.datetime "time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.integer  "ride_id"
+    t.string   "uber_ride_name"
   end
 
   add_index "rideprices", ["ride_id"], name: "index_rideprices_on_ride_id", using: :btree
@@ -30,9 +31,14 @@ ActiveRecord::Schema.define(version: 20151026194504) do
   create_table "rides", force: :cascade do |t|
     t.string   "origin"
     t.string   "destination"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.integer  "user_id"
+    t.float    "origin_latitude"
+    t.float    "origin_longitude"
+    t.float    "destination_latitude"
+    t.float    "destination_longitude"
+    t.string   "ride_name"
   end
 
   add_index "rides", ["user_id"], name: "index_rides_on_user_id", using: :btree

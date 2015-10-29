@@ -1,5 +1,23 @@
+
+<div id ="map"></div>
 <h1>Start Tracking Now</h1>
-<P>Origin Address <%=@origin%></P>
-<p>Destination Address<%=@destination%></p>
+<div class="ride-info">
+<h4>
+<div id = "oAddress" data-string="<%=@origin%>">Origin Address: <%= @origin%></div>
+<div id="dAddress" data-string="<%=@destination%>">Destination Address: <%= @destination%></div></br>
+<div id="ride-cost"></div>
+<div id="ride-name" data-string="<%@ride.ride_name%>"></div>
+</h4>
+</div>
 
+<div class="container">
+  <h2>Uber Ride Prices At Current Time</h2>
+  <div>
+    <canvas id="canvas"></canvas>
+  </div>
+</div>
+<div id="warnings-panel"></div>
 
+<script type="text/javascript">
+ridetrack();
+</script>

@@ -1,17 +1,24 @@
- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg&libraries=places"></script>
+
  <%= render "partials/begmodal" %>
 
-<h1>Track a New Ride</h1>
+
 <div class="form-controls">
+	<div class="new-ride">
+	<h1>Track a New Ride</h1>
+    </div>
 	<div class="line-form-separator"></div>
 	<div class="form-group">
 <%= form_for @ride, url: rides_path, method: "post" do |f|%>
 <%= f.text_field :origin, :placeholder => "Origin Address", :class => "form-control", :id => "autocomplete"%><br>
-<%= f.text_field :destination, :placeholder => "Destination Address", :class => "form-control", :id => "autocomplete"%><br>
-<%= f.submit "Ridetrack Now", :class => "btn-primary btn-block"%><br>
+<%= f.text_field :destination, :placeholder => "Destination Address", :class => "form-control", :id => "autocompleteEnd"%><br>
+<%= f.text_field :ride_name, :placeholder => "Ride Name", :class => "form-control"%><br>
+<%= f.hidden_field :origin_latitude, :class => "form-control", :id => "oLatitude"%><br>
+<%= f.hidden_field :origin_longitude, :class => "form-control", :id => "olongitude"%><br>
+<%= f.submit "Ridetrack Now", :class => "btn-primary btn-block", :id => "callRide" %><br>
 <%end%>
 </div>
 </div>
+
 <script type="text/javascript">
 initAutocomplete();
 </script>

@@ -1,0 +1,32 @@
+canvas#canvas{
+  background-color:rgba(0, 0, 0, 0.23);
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.p {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 140px;
+}
+#container {
+   height: 150px;
+   border-radius: 16px 16px;
+   border-color: #fff;
+   border-style: solid;
+   box-shadow: 2px 2px 10px #B1B1B1;
+   margin-bottom: 25px;
+   border-width: 7px;
+   background-color: 27 27 27 0.28;
+ }
+ 
+ #map {
+  border-top-color: white;
+   height: 384px;
+   width: 100%;
+ }
+
+
