@@ -1,23 +1,24 @@
 Rails.application.routes.draw do
-root to: "users#index"
 
- resources :sessions 
+root to: "sites#index"
+     
+
+get   "/sessions/new", to: "sessions#new", as: "new_session"
+post  "/sessions"    , to:  "sessions#create", as: "sessions"
+delete  "/sessions"  , to:  "sessions#destroy", as: "session"
+
  resources :users
  resources :rides do
     resources :rideprices
   end
 
 
-#  Prefix Verb   URI Pattern                                   Controller#Action
+#     Prefix Verb   URI Pattern                                   Controller#Action
+#         sites_index GET    /sites/index(.:format)                        sites#index
 #                root GET    /                                             users#index
-#            sessions GET    /sessions(.:format)                           sessions#index
-#                     POST   /sessions(.:format)                           sessions#create
 #         new_session GET    /sessions/new(.:format)                       sessions#new
-#        edit_session GET    /sessions/:id/edit(.:format)                  sessions#edit
-#             session GET    /sessions/:id(.:format)                       sessions#show
-#                     PATCH  /sessions/:id(.:format)                       sessions#update
-#                     PUT    /sessions/:id(.:format)                       sessions#update
-#                     DELETE /sessions/:id(.:format)                       sessions#destroy
+#            sessions POST   /sessions(.:format)                           sessions#create
+#             session DELETE /sessions(.:format)                           sessions#destroy
 #               users GET    /users(.:format)                              users#index
 #                     POST   /users(.:format)                              users#create
 #            new_user GET    /users/new(.:format)                          users#new
@@ -42,7 +43,6 @@ root to: "users#index"
 #                     PATCH  /rides/:id(.:format)                          rides#update
 #                     PUT    /rides/:id(.:format)                          rides#update
 #                     DELETE /rides/:id(.:format)                          rides#destroy
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
