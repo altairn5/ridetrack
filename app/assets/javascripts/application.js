@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
-//= require gmaps/google
 //= require map/gmap
 //= require jquery.mb.YTPlayer
 //= require_tree .
