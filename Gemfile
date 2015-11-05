@@ -58,6 +58,6 @@ group :development do
   gem 'spring'
 end
 
-
 gem 'jquery-rails'
 gem 'rails_admin', git: 'git://github.com/sferik/rails_admin.git'
+
