@@ -40,6 +40,14 @@
           <div class="line-form-separator"></div>
           <div class="form-group">
           <%= form_for @user, :html => { :multipart => true } do |f| %>
+            <% if @user.errors.any? %> 
+              <div id="error_explanation">
+                <h2><%= pluralize(@user.errors.count, "error") %> prohibited sign up:</h2>
+                <ul><% @user.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              </div>
+              <% end %>
+            <% end %>
               <%= f.text_field :first_name, placeholder: "First Name", :class => "form-control" %><br>
               <%= f.text_field :last_name, placeholder: "Last Name", :class => "form-control" %><br>
               <%= f.text_field :email, placeholder: "Email", :class => "form-control" %><br>
