@@ -10,7 +10,9 @@ var originlat;
 var originlng;
 var destinlat;
 var destinlng;
-var uberServerToken = "I2ETd0X-rdy7XUihs2AkofcOG2TkfwJgYh5K3GKV";
+var uberServerToken= ENV['UBER_KEY'];
+// var uberServerToken = "I2ETd0X-rdy7XUihs2AkofcOG2TkfwJgYh5K3GKV";
+
 
 
 

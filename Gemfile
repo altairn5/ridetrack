@@ -42,6 +42,7 @@ gem 'stream-ruby'
 
 gem "paperclip", "~> 4.3"
 
+gem 'figaro'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

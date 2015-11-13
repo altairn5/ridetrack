@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 root to: "sites#index"
+get "/", to: "sites#index"
      
 
 get   "/sessions/new", to: "sessions#new", as: "new_session"
@@ -13,9 +14,8 @@ delete  "/sessions"  , to:  "sessions#destroy", as: "session"
   end
 
 
-#     Prefix Verb   URI Pattern                                   Controller#Action
-#         sites_index GET    /sites/index(.:format)                        sites#index
-#                root GET    /                                             users#index
+# Prefix Verb   URI Pattern                                   Controller#Action
+#                root GET    /                                             sites#index
 #         new_session GET    /sessions/new(.:format)                       sessions#new
 #            sessions POST   /sessions(.:format)                           sessions#create
 #             session DELETE /sessions(.:format)                           sessions#destroy
@@ -43,7 +43,6 @@ delete  "/sessions"  , to:  "sessions#destroy", as: "session"
 #                     PATCH  /rides/:id(.:format)                          rides#update
 #                     PUT    /rides/:id(.:format)                          rides#update
 #                     DELETE /rides/:id(.:format)                          rides#destroy
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
