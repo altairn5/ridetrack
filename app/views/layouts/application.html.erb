@@ -2,17 +2,18 @@
 <html>
 <head>
   <title>Ridetrack</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+ 
   <script type ="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
   
  <script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script>
 
- 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 
  
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   <%= csrf_meta_tags %>

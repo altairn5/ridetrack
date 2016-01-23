@@ -10,10 +10,11 @@ var originlat;
 var originlng;
 var destinlat;
 var destinlng;
-var uberServerToken= ENV['UBER_KEY'];
-// var uberServerToken = "I2ETd0X-rdy7XUihs2AkofcOG2TkfwJgYh5K3GKV";
+var uberServerToken = "I2ETd0X-rdy7XUihs2AkofcOG2TkfwJgYh5K3GKV";
 
-
+$( document ).ready(function() {
+  $(".player").YTPlayer();
+});
 
 
 //google maps bounds
@@ -206,7 +207,7 @@ $.ajax({
       });
       console.log("this is the price object" , price);
 
-      //priceArray is only the price values, so they can be display in the chart            
+      //priceArray is only the price values, so they can be displayed in the chart            
       pricesArray = price.map(function(p){
 
         return p.estimate;
@@ -288,10 +289,6 @@ $.ajax({
 // }
 
 
-$(document).ready(function(){
 
-  
- 
-});
 
 
