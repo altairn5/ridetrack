@@ -10,14 +10,14 @@ var originlat;
 var originlng;
 var destinlat;
 var destinlng;
-var uberServerToken = "I2ETd0X-rdy7XUihs2AkofcOG2TkfwJgYh5K3GKV";
+var uberServerToken = "T8mbwylMDwaXXDZMPt8wimfkhh2B3x6ONr_ZkeI9";
 
 $( document ).ready(function() {
   $(".player").YTPlayer();
 });
 
 
-//google maps bounds
+// google maps bounds
 var defaultBounds; 
 defaultBounds = new google.maps.LatLngBounds(
 new google.maps.LatLng(71.3867745,-66.9502861),
@@ -26,6 +26,8 @@ new google.maps.LatLng(18.9110642,172.4458955));
 var options = {
   bounds: defaultBounds
 };
+
+// AUTOCOMPLETES FUNCTIONS STARTS ONCE NEW RIDE PAGES LOADS
 
 function initAutocomplete() {
   
@@ -47,6 +49,8 @@ function initAutocomplete() {
     // });
   // });
 }
+
+// ridetrack FS TAKES ADDRESSES INFO FROM data-string field 
 function ridetrack(){
 
    originAddress = $("#oAddress").data('string');
@@ -263,6 +267,7 @@ $.ajax({
 
             $('#ride-cost').append('<p>Cost: '+"$"+cost+".00"+'</p>')
             $('#ride-name').append('<p>Ride: '+ ride+'</p>')
+            
             //WILL use this equation once database is setup
             // setInterval(function() {
             //   // lineChartDemo.removeData();
