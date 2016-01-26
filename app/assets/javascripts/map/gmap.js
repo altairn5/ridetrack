@@ -10,7 +10,7 @@ var originlat;
 var originlng;
 var destinlat;
 var destinlng;
-var uberServerToken = "T8mbwylMDwaXXDZMPt8wimfkhh2B3x6ONr_ZkeI9";
+var uberServerToken = "y1E9kAAaldI8FMvnG_Lx_dOZ8GOhE9rR9N3gOisE";
 
 $( document ).ready(function() {
   $(".player").YTPlayer();
@@ -267,7 +267,7 @@ $.ajax({
 
             $('#ride-cost').append('<p>Cost: '+"$"+cost+".00"+'</p>')
             $('#ride-name').append('<p>Ride: '+ ride+'</p>')
-            
+
             //WILL use this equation once database is setup
             // setInterval(function() {
             //   // lineChartDemo.removeData();
