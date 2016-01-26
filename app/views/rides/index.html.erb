@@ -1,3 +1,11 @@
 <h1>Rides#index</h1>
 <p>Find me in app/views/rides/index.html.erb</p>
 
+<% @rides.each do |r| %>
+
+<%= @r.origin%>
+<%= @r.destination%>
+<%= @r.ride_name%>
+<% end%>
+
+

@@ -5,7 +5,7 @@
           <p class="title">Edit Ride</p>
         </header>
 
-		<%= form_for @ride, url: rides_path, method: "patch" do |f|%>
+		<%= form_for @ride, url: ride_path, method: "patch" do |f|%>
 			<%= f.text_field :origin, :placeholder => @origin, :class => "form-control", :id => "autocomplete"%><br></div>
 			<%= f.text_field  :destination, :placeholder => @destination, :class => "form-control", :id => "autocompleteEnd"%><br>
 			<%= f.text_field :ride_name, :placeholder => "Ride Name", :class => "form-control", :id => "ride-name"%><br>
