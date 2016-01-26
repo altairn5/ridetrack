@@ -3,9 +3,9 @@
 
 <% @rides.each do |r| %>
 
-<%= @r.origin%>
-<%= @r.destination%>
-<%= @r.ride_name%>
+<h1>Ride Name: <%= r.ride_name%> </h1>
+<ul><%= r[:origin]%></ul>
+<ul><%= r[:destination]%></ul>
 <% end%>
 
 
