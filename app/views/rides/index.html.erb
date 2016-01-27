@@ -3,7 +3,7 @@
 
 <% @rides.each do |r| %>
 
-<h1>Ride Name: <%= r.ride_name%> </h1>
+<h1><%= link_to r.ride_name, ride_path(r[:id]) %> </h1>
 <ul><%= r[:origin]%></ul>
 <ul><%= r[:destination]%></ul>
 <% end%>

@@ -10,7 +10,7 @@ var originlat;
 var originlng;
 var destinlat;
 var destinlng;
-var uberServerToken = "y1E9kAAaldI8FMvnG_Lx_dOZ8GOhE9rR9N3gOisE";
+var uberServerToken = "I2ETd0X-rdy7XUihs2AkofcOG2TkfwJgYh5K3GKV";
 
 $( document ).ready(function() {
   $(".player").YTPlayer();
