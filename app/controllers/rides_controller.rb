@@ -20,6 +20,7 @@ before_action :right_user
   	@origin = @ride[:origin]
   	@destination = @ride[:destination]
     @ride_name = @ride[:ride_name]
+    @uber = ENV['UBER_SERVICE_TOKEN']
   end
 
 

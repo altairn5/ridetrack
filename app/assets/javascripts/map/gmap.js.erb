@@ -10,10 +10,11 @@ var originlat;
 var originlng;
 var destinlat;
 var destinlng;
-var uberServerToken = "<%=ENV['UBER_SERVICE_TOKEN']%>";
+var uberServerToken;
 
 $( document ).ready(function() {
   $(".player").YTPlayer();
+  uberServerToken = $('#uber').data('string');
 });
 
 
