@@ -6,7 +6,6 @@ before_action :right_user
     #why find_by does not capture all
     # @rides = Ride.find_by(:user_id => current_user.id)
     @rides = Ride.all.where(:user_id => current_user.id)
-   
   end
   
   def new

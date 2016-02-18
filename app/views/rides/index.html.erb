@@ -1,7 +1,7 @@
-<h1>Rides#index</h1>
-<p>Find me in app/views/rides/index.html.erb</p>
+<h1>Rides Index Page</h1>
 
-<% @rides.each do |r| %>
+
+<% @rides.each do |r, index| %>
 
 <h1><%= link_to r.ride_name, ride_path(r[:id]) %> </h1>
 <ul><%= r[:origin]%></ul>

@@ -51,7 +51,9 @@ function initAutocomplete() {
   // });
 }
 
+
 // ridetrack FS TAKES ADDRESSES INFO FROM data-string field 
+// fs ridetrack is called from rides/show.html.erb
 function ridetrack(){
 
    originAddress = $("#oAddress").data('string');
@@ -127,7 +129,7 @@ function calculateAndDisplayRoute(directionsDisplay, directionsService,
   }
 
   // Retrieve the start and end locations and create a DirectionsRequest using
-  // WALKING directions.
+  // DRIVING directions.
   directionsService.route({
     origin: originAddress,
     destination: destAddress,
@@ -196,7 +198,7 @@ $.ajax({
       result.prices;
 
       var price = [];
-      // price is now an array objects with information needed
+      // price is now an array of objects with information needed
       price = result.prices.map(function(eachObj)
       {
 
