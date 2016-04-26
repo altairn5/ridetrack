@@ -16,5 +16,6 @@
 //= require bootstrap
 //= require jquery.mb.YTPlayer
 //= require map/gmap
+//= require instagram
 
 
