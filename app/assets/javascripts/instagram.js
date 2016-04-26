@@ -1,10 +1,5 @@
+$(document).ready(function(){
 
-$(document).ready(function instagram(){
+console.log("hellow instagram");
 
-
-console.log("Listening");
-
-
-
-
-})
+});
